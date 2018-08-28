@@ -1,0 +1,99 @@
+
+<html>
+
+<meta charset="UTF-8">
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="asset css/home.css">
+<style>
+body{
+background-color: #F2f2f2;
+margin: 0px;
+padding: 0px;
+width: 100%;
+height: 100%;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#20B2AA ;
+height: 100px;
+}
+label {
+color: white;
+margin-left: 400px;
+font-size: 30px;
+position: fixed;
+margin-top: 30px;
+font-family: "Times New Roman";
+}
+.display-container{
+max-width: 1000px;
+position: relative;
+margin: auto;
+margin-top: 60px;
+}
+.btn{
+  cursor:pointer;
+}
+
+</style>
+
+<body>
+
+  <div class='topnav'>
+  <a><img src="images/logo.jpg" margin="0" height="100px" width="200px"></a>
+  <label for="rwu">RELOCATE WITH US</label>
+  </div>
+
+<div class="display-container">
+  <!-- IMAGE DISPLAY HAVING A COMMON CLASS ( mySlides) -->
+  <img class="mySlides" src="images/slideshow_im1.jpg" style="width:1000px; height: 500px;">
+  <img class="mySlides" src="images/ingenuity-for-life.gif" style="width:1000px; height: 500px;">
+  <img class="mySlides" src="images/spic11.jpg" style="width:1000px; height: 500px;">
+  <img class="mySlides" src="images/slideshow_img4.jpg" style="width:1000px; height: 500px;">
+
+<!-- Buttons for left and right navigation -->
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  // IMAGE SLIDE SHOW AFTER FEW SECONDS
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+
+<a href="main_page.html">
+<button type="button" value="Get Started" class="btn" style=" background-color:2FB689;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+margin-left: 550px;
+margin-top: 50px;
+position: fixed;">Get Started>></button>
+</a>
+
+</body>
+</html>

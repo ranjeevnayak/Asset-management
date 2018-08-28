@@ -1,0 +1,161 @@
+.tnav{
+  /* padding: 0px 0px;
+   margin:"0";*/
+   background-color: #212322;
+}
+#titleStyle{
+  margin-left: 500px;
+  padding: 30px 30px ;
+  margin-top: 1%;
+  position: fixed;
+  background-color:#212322;
+  color:whitesmoke;
+  text:40px;
+}
+.main{
+  background-color: 	#f2f2f2;
+}
+.maindiv{
+  background-color: #f2f2f2;
+    padding: 10px;
+    padding-top: 40px;
+    height: 80%;
+}
+
+/*side menu begins*/
+.sidenav {
+
+    width: 17%;
+    /*position: fixed;*/
+    z-index: 1;
+    background-color: #eee;
+    overflow-x: hidden;
+}
+
+.sidenav a, .dropdown-btn {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #444;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 2px solid DarkGray;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #ccc;
+    transition: 0.4s;
+}
+.active {
+    background-color: #1A9178;
+    color: white;
+}
+.dropdown-container {
+    display: none;
+    background-color: #eee;
+    padding-left: 12px;
+    /*border-bottom: 2px solid black;*/
+    transition: 0.4s;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*side menu ends*/
+
+/*license monitor*/
+.license-count{
+  border-radius: 8px;
+  border: 5px solid #1A9178;
+  background-color: white;
+  text-align: left;
+  padding: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 18px;
+
+
+
+}
+/*license monitor ends*/
+/* margin-left: 230px;
+margin-top: -100px; */
+
+.data{
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  border-radius: 4px;
+  background-color: white;
+  padding: 20px;
+  width: 75%;
+  height: 80%;
+  text-align: center;
+}
+.backBtn-container{
+  float: right;
+
+}
+
+/*back button*/
+.button {
+  border-radius: 4px;
+  background-color: #ccc;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 120px;
+  height: 50px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-left: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+/*back button ends*/
+
+/*display of divs*/
+#table-div{
+  display: block;
+
+}
+#piechart-div{
+  display: none;
+}
+#linegraph-div{
+  display: none;
+}
+#histogram-div{
+  display: none;
+}
+/*display of divs ends*/

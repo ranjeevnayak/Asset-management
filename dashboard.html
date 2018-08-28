@@ -1,0 +1,147 @@
+<html>
+<head>
+  <link rel="stylesheet" href="dashStyle.css">
+<title>License Layout</title>
+<style>
+.container2 {
+ background: linear-gradient(to right,lightgrey, white);
+width: 900px;
+height: 400px;
+margin-top: 100px;
+margin-left: 250px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color:#20B2AA;
+	height: 100px;
+}
+.topnav a {
+     float: left;
+     color: #f2f2f2;
+     text-align: center;
+
+     text-decoration: none;
+     font-size: 50px;
+
+}
+.zoom{
+  width:900px;
+  height:700px;
+  cursor: grab;
+  margin-top: 5px;
+
+}
+
+label {
+color: white;
+margin-left: 400px;
+font-size: 30px;
+position: fixed;
+margin-top: 30px;
+}
+</style>
+
+</head>
+<body class="main">
+  <div class='topnav'>
+  <a><img src="images/logo.jpg" margin="0" height="100px" width="200px"></a>
+   <label for="rwu">RELOCATE WITH US</label>
+  </div>
+  <div class="maindiv">
+  <div class="sidenav">
+  <button class="dropdown-btn">TOWER A &ensp;
+    <span style="font-size:20px;"> &#x25BE;</span>
+  </button>
+  <div class="dropdown-container">
+    <a href="#" onclick="piechartDisp()">GROUND FLOOR-A</a>
+    <a href="#" onclick="piechartDisp()">FIRST FLOOR-A</a>
+    <a href="#" onclick="piechartDisp()">SECOND FLOOR-A</a>
+    <a href="#" onclick="piechartDisp()">THIRD FLOOR-A</a>
+  </div>
+  <button class="dropdown-btn">TOWER B  &ensp;
+    <span style="font-size:20px;"> &#x25BE;</span>
+  </button>
+  <div class="dropdown-container">
+    <a href="#" onclick="piechartDisp()">GROUND FLOOR-B</a>
+    <a href="#" onclick="piechartDisp()">FIRST FLOOR-B</a>
+    <a href="#" onclick="piechartDisp()">SECOND FLOOR-B</a>
+    <a href="#" onclick="piechartDisp()">THIRD FLOOR-B</a>
+  </div>
+</div>
+
+
+<script>
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+</script>
+
+<div class="data" id="table-div">
+
+</div>
+<div class="data piechart" id="piechart-div">
+  <img class='zoom' src='images/buil1.jpg' alt='Daisy!' />
+  <script src="asset js/wheelzoom.js"></script>
+  <script>
+    wheelzoom(document.querySelector('img.zoom'));
+  </script>
+</div>
+
+<div class="data linegraph" id="linegraph-div">
+  lineGraph
+  
+</div>
+
+
+<div class="data histogram" id="histogram-div">
+  histogram
+  
+</div>
+
+<br>
+
+
+
+<script>
+function tableDisp(){
+  document.getElementById("table-div").style.display = "block";
+  document.getElementById("piechart-div").style.display = "none";
+  document.getElementById("linegraph-div").style.display = "none";
+  document.getElementById("histogram-div").style.display = "none";
+}
+function piechartDisp(){
+  document.getElementById("table-div").style.display = "none";
+  document.getElementById("piechart-div").style.display = "block";
+  document.getElementById("linegraph-div").style.display = "none";
+  document.getElementById("histogram-div").style.display = "none";
+}
+function linegraphDisp(){
+  document.getElementById("table-div").style.display = "none";
+  document.getElementById("piechart-div").style.display = "none";
+  document.getElementById("linegraph-div").style.display = "block";
+  document.getElementById("histogram-div").style.display = "none";
+}
+function histogramDisp(){
+  document.getElementById("table-div").style.display = "none";
+  document.getElementById("piechart-div").style.display = "none";
+  document.getElementById("linegraph-div").style.display = "none";
+  document.getElementById("histogram-div").style.display = "block";
+}
+</script>
+
+
+</div>
+</body>
+</html>
